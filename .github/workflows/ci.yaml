@@ -17,10 +17,10 @@ jobs:
 
         ./linux-amd64/helm version
         mkdir /tmp/charts
-        ls -lah charts/go-app/*
-        #for dir in charts/*; do ./linux-amd64/helm package -d /tmp/charts "${dir}"; done
 
-        #./linux-amd64/helm repo index /tmp/charts
+        for dir in charts/*; do ./linux-amd64/helm package -d /tmp/charts "${dir}"; done
+
+        ./linux-amd64/helm repo index /tmp/charts
     - name: Checkout gh-pages
       if: github.ref == 'refs/heads/master'
       uses: actions/checkout@v2
