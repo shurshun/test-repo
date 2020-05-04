@@ -3,9 +3,9 @@ entries:
   go-app:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-04T17:18:10.398905768Z"
+    created: "2020-05-04T17:36:28.539840686Z"
     description: This chart is suitable for single binary applications (golang, nodejs)
-    digest: c467fd0f8dbf999d64365ca83cea551dd245827d7778a7ff3a1d12ea639e04a7
+    digest: 86d632a491c36fdd3053a1e5ece40256ce3cbe977f6f0bb5d1f4c3edf4572d26
     home: https://github.com/shurshun/go-app-chart
     maintainers:
     - email: 4lifenet@gmail.com
@@ -17,9 +17,9 @@ entries:
   php-app:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-05-04T17:18:10.400273394Z"
+    created: "2020-05-04T17:36:28.540865452Z"
     description: This chart is desined for nginx + php applications
-    digest: 22571ebe88a30f299c59dcf604c34cb2f97f0ae1dceb1725f80779fee251706f
+    digest: d2ab1ad9b54a1f9597348c5237a787806898438e23069ea5ead26a9e7da42158
     home: https://github.com/shurshun/php-app-chart
     maintainers:
     - email: 4lifenet@gmail.com
@@ -28,4 +28,4 @@ entries:
     urls:
     - php-app-1.0.18.tgz
     version: 1.0.18
-generated: "2020-05-04T17:18:10.39748714Z"
+generated: "2020-05-04T17:36:28.538363234Z"
