@@ -1,0 +1,8 @@
+[submodule "go-app"]
+	path = charts/go-app
+	url = https://github.com/shurshun/go-app-chart
+	branch = master
+[submodule "charts/php-app"]
+	path = charts/php-app
+	url = https://github.com/shurshun/php-app-chart
+	branch = master
