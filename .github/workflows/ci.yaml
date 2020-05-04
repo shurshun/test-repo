@@ -41,6 +41,6 @@ jobs:
         git add index.yaml
         git status
         git commit -m 'Update Helm Repo'
-        git push https://x-access-token:${GITHUB_TOKEN}@github.com/shurshun/test-repo.git gh-pages
-      env:
-        GITHUB_TOKEN: ${{ secrets.gh_access_token }}
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git gh-pages
+      # env:
+      #   GITHUB_TOKEN: ${{ secrets.gh_access_token }}
