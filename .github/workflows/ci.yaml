@@ -13,16 +13,16 @@ jobs:
         HELM_VERSION: v3.2.0
       shell: bash
       run: |
-        wget -q http://storage.googleapis.com/kubernetes-helm/helm-${HELM_VERSION}-linux-amd64.tar.gz -O - | tar -xzO linux-amd64/helm > /bin/helm
-        chmod +x /bin/helm
+        wget -q http://storage.googleapis.com/kubernetes-helm/helm-${HELM_VERSION}-linux-amd64.tar.gz -O - | tar -xzO linux-amd64/helm > helm
+        chmod +x helm
 
-        helm version
+        ./helm version
 
         mkdir /tmp/charts
 
-        for dir in charts/*; do ./linux-amd64/helm package -d /tmp/charts "${dir}"; done
+        for dir in charts/*; do ./helm package -d /tmp/charts "${dir}"; done
 
-        helm repo index /tmp/charts
+        ./helm repo index /tmp/charts
     - name: Checkout gh-pages
       if: github.ref == 'refs/heads/master'
       uses: actions/checkout@v2
