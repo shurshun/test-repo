@@ -9,20 +9,20 @@ jobs:
       with:
         submodules: 'true'
     - name: Build charts
+      shell: bash
       env:
         HELM_VERSION: v3.2.0
-      shell: bash
       run: |
-        wget -q http://storage.googleapis.com/kubernetes-helm/helm-${HELM_VERSION}-linux-amd64.tar.gz -O - | tar -xzO linux-amd64/helm > helm
-        chmod +x helm
+        wget --no-verbose "https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz"
+        tar -zxf "helm-${HELM_VERSION}-linux-amd64.tar.gz"
+        chmod +x linux-amd64/helm
 
-        ./helm version
-
+        ./linux-amd64/helm version
         mkdir /tmp/charts
 
-        for dir in charts/*; do ./helm package -d /tmp/charts "${dir}"; done
+        for dir in charts/*; do ./linux-amd64/helm package -d /tmp/charts "${dir}"; done
 
-        ./helm repo index /tmp/charts
+        ./linux-amd64/helm repo index /tmp/charts
     - name: Checkout gh-pages
       if: github.ref == 'refs/heads/master'
       uses: actions/checkout@v2
