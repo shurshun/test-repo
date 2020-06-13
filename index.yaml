@@ -3,29 +3,20 @@ entries:
   go-app:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-06-13T20:52:44.213616669Z"
-    description: This chart is suitable for single binary applications (golang, nodejs)
-    digest: c0bc758ebef12fa68f96ee5b9270dee985b39aa9f5786d2b74215fc0b77ea352
+    created: "2020-06-13T20:55:56.230497896Z"
+    description: This chart is suitable for single binary applications (golang, nodejs,
+      etc...)
+    digest: 3004aed2b7bf1c8d79179af98b6b9e30a05f68deeb09148ad3142186204acd4a
     home: https://github.com/shurshun/go-app-chart
+    keywords:
+    - helm
+    - kubernetes
+    kubeVersion: '>=1.10.0-0'
     maintainers:
     - email: 4lifenet@gmail.com
       name: Korviakov Andrey
     name: go-app
     urls:
-    - go-app-0.1.66.tgz
-    version: 0.1.66
-  php-app:
-  - apiVersion: v1
-    appVersion: "1.0"
-    created: "2020-06-13T20:52:44.215110546Z"
-    description: This chart is desined for nginx + php applications
-    digest: 85ff79e0808428c5df6460eb4c4ade4591931dd4323c251880feb603b00453c2
-    home: https://github.com/shurshun/php-app-chart
-    maintainers:
-    - email: 4lifenet@gmail.com
-      name: Korviakov Andrey
-    name: php-app
-    urls:
-    - php-app-1.0.18.tgz
-    version: 1.0.18
-generated: "2020-06-13T20:52:44.212184091Z"
+    - go-app-0.1.70.tgz
+    version: 0.1.70
+generated: "2020-06-13T20:55:56.228998804Z"
